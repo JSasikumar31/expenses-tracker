@@ -8,8 +8,15 @@ if (!MONGODB_URI) {
 
 let cached: MongooseCache = global.mongoose || { conn: null, promise: null };
 
-if (!global.mongoose) {
-	global.mongoose = cached;
+if (typeof global !== "undefined") {
+	let cached: MongooseCache = global.mongoose || {
+		conn: null,
+		promise: null,
+	};
+
+	if (!global.mongoose) {
+		global.mongoose = cached;
+	}
 }
 
 async function dbConnect(): Promise<mongoose.Connection> {

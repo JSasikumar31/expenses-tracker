@@ -19,7 +19,7 @@ export const createCategory = async (name: string) => {
 	}
 };
 
-export const getCategories = async () => {
+export const getAllCategories = async () => {
 	try {
 		await dbConnect();
 		const categories = await Category.find();
@@ -44,15 +44,19 @@ export const deleteCategory = async (id: string) => {
 };
 
 export const updateCategory = async (id: string, name: string) => {
-    try {
-        await dbConnect();
-        const category = await Category.findByIdAndUpdate(id, { name }, { new: true });
-        if (!category) {
-            throw new Error("Category not found");
-        }
+	try {
+		await dbConnect();
+		const category = await Category.findByIdAndUpdate(
+			id,
+			{ name },
+			{ new: true }
+		);
+		if (!category) {
+			throw new Error("Category not found");
+		}
 
-        return JSON.parse(JSON.stringify(category));
-    } catch (error) {
-        handleError(error);
-    }
+		return JSON.parse(JSON.stringify(category));
+	} catch (error) {
+		handleError(error);
+	}
 };

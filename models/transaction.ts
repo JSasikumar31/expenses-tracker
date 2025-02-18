@@ -4,7 +4,7 @@ export interface ITransaction extends Document {
 	amount: number;
 	description: string;
 	date: Date;
-	category: Schema.Types.ObjectId;
+	budget: Schema.Types.ObjectId;
 }
 
 const TransactionSchema = new Schema<ITransaction>({
@@ -20,9 +20,9 @@ const TransactionSchema = new Schema<ITransaction>({
 		type: Date,
 		default: new Date(),
 	},
-	category: {
+	budget: {
 		type: Schema.Types.ObjectId,
-		ref: "Category",
+		ref: "Budget",
 		required: true,
 	},
 });

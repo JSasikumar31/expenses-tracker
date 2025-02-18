@@ -1,29 +1,34 @@
 import mongoose, { Document, Schema } from "mongoose";
 
 export interface IBudget extends Document {
+	name: string;
 	amount: number;
-	category: Schema.Types.ObjectId;
+	category: mongoose.Schema.Types.ObjectId;
 	year: number;
 	month: number;
 }
 
 const BudgetSchema = new Schema<IBudget>({
+	name: {
+		type: String,
+		required: true,
+	},
 	amount: {
 		type: Number,
 		required: true,
 	},
 	category: {
-		type: Schema.Types.ObjectId,
+		type: mongoose.Schema.Types.ObjectId,
 		ref: "Category",
 		required: true,
 	},
 	year: {
 		type: Number,
-		default: new Date().getFullYear(),
+		default: () => new Date().getFullYear(),
 	},
 	month: {
 		type: Number,
-		default: new Date().getMonth() + 1,
+		default: () => new Date().getMonth() + 1,
 	},
 });
 
