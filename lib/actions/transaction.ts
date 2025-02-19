@@ -174,7 +174,7 @@ export const getTransactionForGraph = async () => {
 					as: "categoryDetails",
 				},
 			},
-			{ $unwind: "$categoryDetails" }, // Unwind the category details
+			{ $unwind: "$categoryDetails" },
 			{
 				$project: {
 					description: 1,

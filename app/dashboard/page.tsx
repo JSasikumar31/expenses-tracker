@@ -11,7 +11,7 @@ import { getAllTransactions } from "@/lib/actions/transaction";
 import { Budget } from "@/types/budget";
 import { Category } from "@/types/category";
 import { Transaction } from "@/types/transaction";
-import { DollarSign } from "lucide-react";
+import { MonitorCog, PiggyBank, Wallet } from "lucide-react";
 import { useEffect, useState } from "react";
 
 export default function Dashboard() {
@@ -63,11 +63,11 @@ export default function Dashboard() {
 			<section className="px-2 flex flex-row flex-wrap gap-6 w-full">
 				<InfoCard
 					amount={budgetData.reduce(
-						(acc, curr) => acc + curr.amount,
+						(acc: number, curr) => acc + curr.amount,
 						0
 					)}
 					placeholder="Total Budget"
-					icon={DollarSign}
+					icon={Wallet}
 				/>
 				<InfoCard
 					amount={transactionData.reduce(
@@ -75,12 +75,12 @@ export default function Dashboard() {
 						0
 					)}
 					placeholder="Total Transactions"
-					icon={DollarSign}
+					icon={PiggyBank}
 				/>
 				<InfoCard
 					amount={transactionData.length}
 					placeholder="Total Items"
-					icon={DollarSign}
+					icon={MonitorCog}
 				/>
 			</section>
 

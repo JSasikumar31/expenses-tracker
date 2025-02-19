@@ -1,36 +1,96 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# MoneyMap | Finance Visualizer
 
-## Getting Started
+A simple web application for tracking personal finances, visualizing transactions, and managing budgets. Here, you can first specify your budgets and then add transactions to them.
 
-First, run the development server:
+_No Login Required :_ Explore the APP
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+## Tech Stack
+
+-   **NextJS**: A React framework for building web applications.
+-   **MongoDB**: A NoSQL database for storing financial data.
+-   **Tailwind CSS**: A utility-first CSS framework for rapid UI development.
+-   **ShadCN UI**: A design system for building accessible and responsive user interfaces.
+-   **Recharts**: A charting library for creating interactive and visually appealing data visualizations.
+
+## Overview
+
+This allows you to track your personal finances, visualize your transactions, and manage budgets with ease.
+
+### **Home Page**
+
+![Home page](/public/home.png)
+
+### **Dashboard Page**
+
+![Dashboard page](/public/dashboard.png)
+
+### **Budget Page**
+
+![Budgets page](/public/budget.png)
+
+### **Budget Details Page**
+
+![Budget details page](/public/budget-details.png)
+
+### **Category Page**
+
+![Categories page](/public/category.png)
+
+### **Transaction Page**
+
+![Transactions page](/public/transaction.png)
+
+## Setup & Installation
+
+### 1️⃣ Clone the Repository
+
+```sh
+git clone https://github.com/alok-x0s1/MoneyMap.git
+cd MoneyMap
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### 2️⃣ Install Dependencies
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```sh
+npm install # or yarn install
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### 3️⃣ Configure Environment Variables
 
-## Learn More
+Create a `.env` file in the root directory and add:
 
-To learn more about Next.js, take a look at the following resources:
+```env
+MONGO_URI=mongodb+srv://your-username:your-password@cluster.mongodb.net/dbname
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### 4️⃣ Run the Development Server
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+```sh
+npm run dev # or yarn dev
+```
 
-## Deploy on Vercel
+The app will be available at `http://localhost:3000`.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Future Improvements
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+-   Implement filters and sorting for transactions
+-   Add data export (CSV, PDF)
+-   Improve UI animations and accessibility
+
+## Contributing
+
+Feel free to submit pull requests and open issues. Contributions are always welcome!
+
+1. Fork the repository.
+2. Create a new branch (`git checkout -b feature-name`).
+3. Commit your changes (`git commit -m 'Add new feature'`).
+4. Push to the branch (`git push origin feature-name`).
+5. Open a pull request.
+
+## Support
+
+For any issues, contact : **[@contact_me](https://instagram.com/mr_x0s1)**
+
+## Thank You!
+
+Thanks for using E-manage! If you have any questions or feedback, don't hesitate to reach out. Happy event planning!
