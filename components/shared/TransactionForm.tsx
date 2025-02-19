@@ -1,6 +1,6 @@
 "use client";
 
-import { createTransactionSchema } from "@/app/data/validator";
+import { createTransactionSchema } from "@/data/validator";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
 import { Button } from "@/components/ui/button";
@@ -65,6 +65,11 @@ const TransactionForm: React.FC<{
 				toast({
 					title: "Success",
 					description: "Transaction created successfully",
+				});
+				form.reset({
+					description: undefined,
+					amount: undefined,
+					date: undefined,
 				});
 			} else if (type === "update") {
 				await updateTransaction(id, data);

@@ -1,6 +1,6 @@
 "use client";
 
-import { createBudgetSchema } from "@/app/data/validator";
+import { createBudgetSchema } from "@/data/validator";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
 import { Button } from "@/components/ui/button";

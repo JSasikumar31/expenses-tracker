@@ -1,5 +1,4 @@
-// components/shared/TransactionCard.tsx
-import { Transaction } from "@/types/transaction"; // Assuming you have a `Transaction` type
+import { Transaction } from "@/types/transaction";
 import { CreditCard } from "lucide-react";
 import Link from "next/link";
 

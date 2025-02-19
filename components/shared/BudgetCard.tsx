@@ -9,13 +9,13 @@ import {
 	CardFooter,
 } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { getMonthName } from "@/app/data";
+import { getMonthName } from "@/data";
 
 const BudgetCard = ({ budget }: { budget: Budget }) => {
 	return (
 		<Link
 			key={budget._id}
-			href={`/dashboard/transactions/${budget._id}`}
+			href={`/dashboard/budgets/${budget._id}`}
 			passHref
 		>
 			<Card className="w-full min-w-96 mb-4 hover:shadow-lg hover:ring-2 hover:ring-primary-500 transition-all duration-300 cursor-pointer">

@@ -11,7 +11,7 @@ import {
 import { motion } from "framer-motion";
 import BudgetForm from "./BudgetForm";
 
-export function CreateBudget({ reFetch }: { reFetch: () => void }) {
+const CreateBudget = ({ reFetch }: { reFetch: () => void }) => {
 	const [dialogOpen, setDialogOpen] = useState(false);
 
 	return (
@@ -43,4 +43,6 @@ export function CreateBudget({ reFetch }: { reFetch: () => void }) {
 			</DialogContent>
 		</Dialog>
 	);
-}
+};
+
+export default CreateBudget;
