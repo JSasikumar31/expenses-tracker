@@ -27,7 +27,7 @@ import {
 } from "@/lib/actions/transaction";
 import { CalendarIcon } from "lucide-react";
 import { cn } from "@/lib/utils";
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 
 const TransactionForm: React.FC<{
 	id: string;
@@ -48,7 +48,10 @@ const TransactionForm: React.FC<{
 				} catch (error) {
 					toast({
 						title: "Error",
-						description: "Failed to fetch transaction data",
+						description:
+							error instanceof Error
+								? error.message
+								: "Failed to fetch transaction data",
 						variant: "destructive",
 					});
 				}

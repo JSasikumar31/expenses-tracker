@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useCallback, useEffect, useState } from "react";
 import { getAllCategories } from "@/lib/actions/category";
 import { getAllBudgets } from "@/lib/actions/budget";
 import { Category } from "@/types/category";
@@ -11,6 +11,16 @@ import CardSkeleton from "@/components/shared/CardSkeleton";
 
 export default function Categories() {
 	const { toast } = useToast();
+	const showToast = useCallback(
+		(message: string) => {
+			toast({
+				title: "Error",
+				description: message,
+				variant: "destructive",
+			});
+		},
+		[toast]
+	);
 
 	const [loading, setLoading] = useState(true);
 	const [budgetData, setBudgetData] = useState<Budget[]>([]);
@@ -31,18 +41,14 @@ export default function Categories() {
 						? error.message
 						: "An unknown error occurred";
 
-				toast({
-					title: "Error",
-					description: errorMessage,
-					variant: "destructive",
-				});
+				showToast(errorMessage);
 			} finally {
 				setLoading(false);
 			}
 		};
 
 		fetchCategories();
-	}, []);
+	}, [showToast]);
 
 	if (loading) {
 		return <CardSkeleton />;

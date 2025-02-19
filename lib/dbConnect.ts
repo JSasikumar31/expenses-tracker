@@ -6,10 +6,10 @@ if (!MONGODB_URI) {
 	throw new Error("Please define the MONGODB_URI environment variable");
 }
 
-let cached: MongooseCache = global.mongoose || { conn: null, promise: null };
+const cached: MongooseCache = global.mongoose || { conn: null, promise: null };
 
 if (typeof global !== "undefined") {
-	let cached: MongooseCache = global.mongoose || {
+	const cached: MongooseCache = global.mongoose || {
 		conn: null,
 		promise: null,
 	};

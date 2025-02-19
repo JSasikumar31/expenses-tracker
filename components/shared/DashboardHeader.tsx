@@ -5,8 +5,8 @@ const DashboardHeader = () => {
 				Welcome, User 🤘
 			</h1>
 			<p className="mb-6">
-				Here is what's happening with your money, You can manage your
-				Budgets and Transactions here.
+				Here is what&apos;s happening with your money, You can manage
+				your Budgets and Transactions here.
 			</p>
 		</div>
 	);

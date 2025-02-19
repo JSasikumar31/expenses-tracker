@@ -12,7 +12,6 @@ import {
 } from "@/components/ui/sidebar";
 import {
 	BookCopy,
-	Cable,
 	CircleDollarSign,
 	HandCoins,
 	LayoutDashboard,

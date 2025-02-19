@@ -52,7 +52,7 @@ const ExpenseDetails = ({ params }: { params: Promise<{ id: string }> }) => {
 	};
 
 	const fetchTransactionLists = async () => {
-		loading && setLoading(true);
+		if (loading) setLoading(true);
 		if (!id) return;
 		try {
 			const transactionList = await getTransactionByBudgetId(id);
@@ -69,7 +69,7 @@ const ExpenseDetails = ({ params }: { params: Promise<{ id: string }> }) => {
 				variant: "destructive",
 			});
 		} finally {
-			loading && setLoading(false);
+			if (loading) setLoading(false);
 		}
 	};
 

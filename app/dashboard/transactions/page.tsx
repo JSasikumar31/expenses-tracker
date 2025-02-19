@@ -6,14 +6,14 @@ import { DataTable } from "@/components/Table/data-table";
 import { useToast } from "@/hooks/use-toast";
 import { getAllTransactions } from "@/lib/actions/transaction";
 import { Transaction } from "@/types/transaction";
-import { useEffect, useState } from "react";
+import { useCallback, useEffect, useState } from "react";
 
 export default function Transactions() {
 	const [transactionList, setTransactionList] = useState<Transaction[]>([]);
 	const [loading, setLoading] = useState(false);
 	const { toast } = useToast();
 
-	const fetchTransactionLists = async () => {
+	const fetchTransactionLists = useCallback(async () => {
 		setLoading(true);
 		try {
 			const transactionList = await getAllTransactions();
@@ -33,11 +33,11 @@ export default function Transactions() {
 		} finally {
 			setLoading(false);
 		}
-	};
+	}, [toast]);
 
 	useEffect(() => {
 		fetchTransactionLists();
-	}, []);
+	}, [fetchTransactionLists]);
 	const columns = createColumns(fetchTransactionLists);
 
 	return (

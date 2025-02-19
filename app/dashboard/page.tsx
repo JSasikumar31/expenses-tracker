@@ -12,10 +12,20 @@ import { Budget } from "@/types/budget";
 import { Category } from "@/types/category";
 import { Transaction } from "@/types/transaction";
 import { MonitorCog, PiggyBank, Wallet } from "lucide-react";
-import { useEffect, useState } from "react";
+import { useCallback, useEffect, useState } from "react";
 
 export default function Dashboard() {
 	const { toast } = useToast();
+	const showToast = useCallback(
+		(message: string) => {
+			toast({
+				title: "Error",
+				description: message,
+				variant: "destructive",
+			});
+		},
+		[toast]
+	);
 
 	const [loading, setLoading] = useState(true);
 	const [budgetData, setBudgetData] = useState<Budget[]>([]);
@@ -42,17 +52,13 @@ export default function Dashboard() {
 						? error.message
 						: "An unknown error occurred";
 
-				toast({
-					title: "Error",
-					description: errorMessage,
-					variant: "destructive",
-				});
+				showToast(errorMessage);
 				setLoading(false);
 			}
 		};
 
 		fetchData();
-	}, [toast]);
+	}, [showToast]);
 
 	if (loading) {
 		return <CardSkeleton />;
