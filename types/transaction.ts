@@ -1,5 +1,3 @@
-import { Budget } from "./budget";
-
 export interface CreateTransactionProps {
 	amount: number;
 	description: string;
@@ -19,4 +17,13 @@ export interface Transaction {
 	description: string;
 	date: Date;
 	budget: Budget;
+}
+
+interface Budget {
+	_id: string;
+	name: string;
+	amount: number;
+	category: string;
+	year: number;
+	month: number;
 }
