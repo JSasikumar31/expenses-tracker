@@ -12,33 +12,7 @@ _No Login Required :_ Explore the APP
 -   **ShadCN UI**: A design system for building accessible and responsive user interfaces.
 -   **Recharts**: A charting library for creating interactive and visually appealing data visualizations.
 
-## Overview
 
-This allows you to track your personal finances, visualize your transactions, and manage budgets with ease.
-
-### **Home Page**
-
-![Home page](/public/home.png)
-
-### **Dashboard Page**
-
-![Dashboard page](/public/dashboard.png)
-
-### **Budget Page**
-
-![Budgets page](/public/budget.png)
-
-### **Budget Details Page**
-
-![Budget details page](/public/budget-details.png)
-
-### **Category Page**
-
-![Categories page](/public/category.png)
-
-### **Transaction Page**
-
-![Transactions page](/public/transaction.png)
 
 ## Setup & Installation
 
@@ -46,7 +20,7 @@ This allows you to track your personal finances, visualize your transactions, an
 
 ```sh
 git clone https://github.com/JSasikumar31/expense-tracker.git
-cd MoneyMap
+cd expenses-tracker
 ```
 
 ### 2️⃣ Install Dependencies
