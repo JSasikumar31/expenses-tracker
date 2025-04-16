@@ -1,5 +1,5 @@
 {
-  "name": "money-map",
+  "name": "expenses",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -23,7 +23,7 @@
     "axios": "^1.7.9",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
-    "date-fns": "^4.1.0",
+    "date-fns": "^3.6.0",
     "framer-motion": "^12.4.3",
     "lucide-react": "^0.475.0",
     "mongoose": "^8.10.1",

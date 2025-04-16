@@ -1,7 +1,7 @@
 import { MongooseCache } from "@/types/global";
 import mongoose from "mongoose";
 
-const MONGODB_URI = process.env.MONGODB_URI as string;
+const MONGODB_URI = 'mongodb+srv://sasikumar:gamingwithkidss@cluster1.y9jfywy.mongodb.net/expenses-tracker'
 if (!MONGODB_URI) {
 	throw new Error("Please define the MONGODB_URI environment variable");
 }

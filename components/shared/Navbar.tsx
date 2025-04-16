@@ -7,7 +7,7 @@ export default function Navbar() {
 		<nav className="border-b">
 			<div className="wrapper p-2 flex items-center justify-between">
 				<Link href="/">
-					<Image src="/logo.jpg" alt="Logo" width={50} height={50} />
+					<h1 className="text-2xl w-full size-55 text-black font-extrabold" > EXPENSES TRACKER</h1>
 				</Link>
 				<Link href="/dashboard">
 					<Button>Dashboard</Button>

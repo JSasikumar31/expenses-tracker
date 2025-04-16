@@ -57,13 +57,8 @@ export function AppSidebar() {
 					href="/"
 					className="flex flex-wrap gap-1 items-center text-center"
 				>
-					<Image
-						src="/logo-name.jpg"
-						alt="Logo"
-						width={50}
-						height={50}
-					/>
-					<h2 className="text-3xl font-bold text-black">MoneyMap</h2>
+					
+					<h2 className="text-2xl font-bold text-black">EXPENSES TRACKER</h2>
 				</Link>
 			</SidebarHeader>
 			<SidebarContent>
